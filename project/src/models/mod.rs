@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
 use utoipa::ToSchema;
+use validator::Validate;
 
 #[derive(Debug, Serialize, Deserialize, ToSchema)]
 pub struct ErrorResponse {
@@ -31,13 +32,13 @@ pub struct Meta {
     pub extra: std::collections::HashMap<String, serde_json::Value>,
 }
 
-#[derive(Debug, Serialize, Deserialize, ToSchema)]
+#[derive(Debug, Serialize, Deserialize, ToSchema, Validate)]
 pub struct PaginatedList<T> {
     pub data: Vec<T>,
     pub meta: PaginationMeta,
 }
 
-#[derive(Debug, Serialize, Deserialize, ToSchema)]
+#[derive(Debug, Serialize, Deserialize, ToSchema, Validate)]
 pub struct SingleResource<T> {
     pub data: T,
     pub meta: Meta,

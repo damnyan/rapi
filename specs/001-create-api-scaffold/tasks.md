@@ -30,9 +30,9 @@
 - [x] T011 Implement OpenAPI doc generation and serve at `/openapi.json` and `/swagger-ui/` in `main.rs`
 
 ## Phase 3.4: Integration
-- [ ] T012 Set up Postgres connection pool in `project/db/` using deadpool-postgres
-- [ ] T013 Add structured logging and error context (tracing/log crate) in `main.rs` and middleware
-- [ ] T014 Add validation logic using validator crate in models and handlers
+- [x] T012 Set up Postgres connection pool in `project/db/` using deadpool-postgres
+- [x] T013 Add structured logging and error context (tracing/log crate) in `main.rs` and middleware
+- [x] T014 Add validation logic using validator crate in models and handlers
 
 ## Phase 3.5: Polish
 - [ ] T015 [P] Add unit tests for error and validation logic in `project/tests/`
