@@ -1,0 +1,115 @@
+openapi: 3.0.3
+info:
+  title: Rust API Scaffold
+  version: 0.1.0
+  description: >
+    API scaffold generated with actix-web, Postgres, OpenAPI, and strict error/pagination/meta response patterns.
+servers:
+  - url: http://localhost:8080
+paths:
+  /example:
+    get:
+      summary: Example endpoint
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SingleResourceExample"
+        "4XX":
+          description: Client error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "5XX":
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "422":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ValidationErrorResponse"
+components:
+  schemas:
+    ErrorResponse:
+      type: object
+      required: [code, message, description]
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+        description:
+          type: string
+    ValidationErrorResponse:
+      type: object
+      required: [code, message, description, errors]
+      properties:
+        code:
+          type: string
+          enum: [validation.error]
+        message:
+          type: string
+        description:
+          type: string
+        errors:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+    PaginatedListExample:
+      type: object
+      required: [data, meta]
+      properties:
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/ExampleResource"
+        meta:
+          $ref: "#/components/schemas/PaginationMeta"
+    SingleResourceExample:
+      type: object
+      required: [data, meta]
+      properties:
+        data:
+          $ref: "#/components/schemas/ExampleResource"
+        meta:
+          $ref: "#/components/schemas/Meta"
+    ExampleResource:
+      type: object
+      required: [id, name, other, some_object]
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        other:
+          type: string
+        some_object:
+          type: object
+          properties:
+            some:
+              type: string
+    PaginationMeta:
+      type: object
+      required: [page, per_page, total]
+      properties:
+        page:
+          type: integer
+        per_page:
+          type: integer
+        total:
+          type: integer
+        # Developers may add additional fields
+      additionalProperties: true
+    Meta:
+      type: object
+      description: Arbitrary extensible meta object
+      additionalProperties: true
