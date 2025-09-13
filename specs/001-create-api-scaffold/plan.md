@@ -183,24 +183,29 @@ ios/ or android/
 **Output**: data-model.md, /contracts/*, failing tests, quickstart.md, agent-specific file
 
 ## Phase 2: Task Planning Approach
-*This section describes what the /tasks command will do - DO NOT execute during /plan*
 
-**Task Generation Strategy**:
-- Load `/templates/tasks-template.md` as base
-- Generate tasks from Phase 1 design docs (contracts, data model, quickstart)
-- Each contract → contract test task [P]
-- Each entity → model creation task [P] 
-- Each user story → integration test task
-- Implementation tasks to make tests pass
+This section describes what the /tasks command will do—DO NOT execute during /plan.
 
-**Ordering Strategy**:
-- TDD order: Tests before implementation 
-- Dependency order: Models before services before UI
-- Mark [P] for parallel execution (independent files)
+**Task Generation Strategy:**
+- Load `/templates/tasks-template.md` as the base for tasks.md.
+- Generate tasks from all Phase 1 design artifacts:
+   - OpenAPI contract(s) in `contracts/openapi.yaml`
+   - Data model in `data-model.md`
+   - Quickstart and research docs for context
+- For each contract (endpoint/schema): create a contract test task [P]
+- For each entity in the data model: create a model definition/validation task [P]
+- For each user story/scenario: create an integration test task
+- Add implementation tasks to make all tests pass (TDD: tests before code)
+- Ensure error, validation, and pagination/meta response patterns are covered by explicit tasks
 
-**Estimated Output**: 25-30 numbered, ordered tasks in tasks.md
+**Ordering Strategy:**
+- TDD order: All contract/integration/unit tests before implementation
+- Dependency order: Models before services before API handlers
+- Mark [P] for parallel execution where tasks are independent (e.g., model/entity creation, contract tests)
 
-**IMPORTANT**: This phase is executed by the /tasks command, NOT by /plan
+**Estimated Output:** 25–30 numbered, ordered tasks in tasks.md, grouped for parallel execution where possible.
+
+**IMPORTANT:** This phase is executed by the /tasks command, NOT by /plan.
 
 ## Phase 3+: Future Implementation
 *These phases are beyond the scope of the /plan command*
@@ -222,10 +227,11 @@ ios/ or android/
 
 *This checklist is updated during execution flow*
 
+
 **Phase Status**:
 - [x] Phase 0: Research complete (/plan command)
 - [x] Phase 1: Design complete (/plan command)
-- [ ] Phase 2: Task planning complete (/plan command - describe approach only)
+- [x] Phase 2: Task planning complete (/plan command - describe approach only)
 - [ ] Phase 3: Tasks generated (/tasks command)
 - [ ] Phase 4: Implementation complete
 - [ ] Phase 5: Validation passed
