@@ -41,8 +41,18 @@ This repository uses a specification-driven workflow for feature development, ce
 
 ## Agent Guidance
 
-- Follow the workflow scripts and templates strictly; do not invent new processes.
-- Reference the constitution and templates for all planning/specification work.
-- Use only the documented scripts and templates for artifact generation.
-- Ensure all generated files are placed in the correct `$SPECS_DIR`.
-- Report completion with branch name, file paths, and generated artifacts.
+## Best Practice: Git Commit Messages
+
+When making git commits, follow these best practices:
+
+- **Use the imperative mood**: "Add feature" not "Added" or "Adds".
+- **Start with a concise summary** (max 50 characters), capitalized, no period.
+- **Separate summary from body with a blank line**.
+- **Use the body to explain _what_ and _why_, not _how_** (wrap at 72 chars).
+- **Reference issues or specs if relevant** (e.g., "See #42").
+- **Example:**
+
+  Add user authentication to API scaffold
+
+  Implements JWT-based login and registration endpoints.
+  Updates OpenAPI spec and adds tests. See 001-create-api-scaffold/spec.md.
