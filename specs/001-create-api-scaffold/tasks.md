@@ -35,9 +35,9 @@
 - [x] T014 Add validation logic using validator crate in models and handlers
 
 ## Phase 3.5: Polish
-- [ ] T015 [P] Add unit tests for error and validation logic in `project/tests/`
-- [ ] T016 [P] Update quickstart.md and OpenAPI docs for new endpoints and models
-- [ ] T017 [P] Performance test: Ensure <200ms p95 latency under load
+- [x] T015 [P] Add unit tests for error and validation logic in `project/tests/`
+- [x] T016 [P] Update quickstart.md and OpenAPI docs for new endpoints and models
+- [x] T017 [P] Performance test: Ensure <200ms p95 latency under load
 
 ## Dependencies
 - Setup (T001-T003) before all other tasks

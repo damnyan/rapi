@@ -1,6 +1,7 @@
 use serde::{Deserialize, Serialize};
 use utoipa::ToSchema;
 use validator::Validate;
+use validator_derive::Validate;
 
 #[derive(Debug, Serialize, Deserialize, ToSchema)]
 pub struct ErrorResponse {
