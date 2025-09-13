@@ -18,16 +18,16 @@
 - [x] T003 [P] Configure linting (rustfmt, clippy) and .env setup
 
 ## Phase 3.2: Tests First (TDD)
-- [ ] T004 [P] Contract test for error response schema in `specs/001-create-api-scaffold/contracts/example_contract_test.rs`
-- [ ] T005 [P] Contract test for validation error response schema in `specs/001-create-api-scaffold/contracts/example_contract_test.rs`
-- [ ] T006 [P] Contract test for paginated list response schema in `specs/001-create-api-scaffold/contracts/example_contract_test.rs`
-- [ ] T007 [P] Contract test for single resource response schema in `specs/001-create-api-scaffold/contracts/example_contract_test.rs`
+- [x] T004 [P] Contract test for error response schema in `specs/001-create-api-scaffold/contracts/example_contract_test.rs`
+- [x] T005 [P] Contract test for validation error response schema in `specs/001-create-api-scaffold/contracts/example_contract_test.rs`
+- [x] T006 [P] Contract test for paginated list response schema in `specs/001-create-api-scaffold/contracts/example_contract_test.rs`
+- [x] T007 [P] Contract test for single resource response schema in `specs/001-create-api-scaffold/contracts/example_contract_test.rs`
 
 ## Phase 3.3: Core Implementation
-- [ ] T008 [P] Implement ErrorResponse, ValidationErrorResponse, PaginatedList, SingleResource, PaginationMeta, and Meta models in `project/models/`
-- [ ] T009 Implement GET /example endpoint in `project/api/` per OpenAPI spec
-- [ ] T010 Implement error handling and response mapping in `project/errors/`
-- [ ] T011 Implement OpenAPI doc generation and serve at `/openapi.json` and `/swagger-ui/` in `main.rs`
+- [x] T008 [P] Implement ErrorResponse, ValidationErrorResponse, PaginatedList, SingleResource, PaginationMeta, and Meta models in `project/models/`
+- [x] T009 Implement GET /example endpoint in `project/api/` per OpenAPI spec
+- [x] T010 Implement error handling and response mapping in `project/errors/`
+- [x] T011 Implement OpenAPI doc generation and serve at `/openapi.json` and `/swagger-ui/` in `main.rs`
 
 ## Phase 3.4: Integration
 - [ ] T012 Set up Postgres connection pool in `project/db/` using deadpool-postgres

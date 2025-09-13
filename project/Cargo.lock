@@ -225,23 +225,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "api_scaffold"
-version = "0.1.0"
-dependencies = [
- "actix-web",
- "deadpool-postgres",
- "dotenvy",
- "log",
- "serde",
- "thiserror 1.0.69",
- "tokio",
- "tracing",
- "utoipa",
- "utoipa-swagger-ui",
- "validator",
-]
-
-[[package]]
 name = "async-trait"
 version = "0.1.89"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -509,6 +492,24 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.106",
+]
+
+[[package]]
+name = "dmnapi"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "deadpool-postgres",
+ "dotenvy",
+ "log",
+ "serde",
+ "serde_json",
+ "thiserror 1.0.69",
+ "tokio",
+ "tracing",
+ "utoipa",
+ "utoipa-swagger-ui",
+ "validator",
 ]
 
 [[package]]
@@ -1845,6 +1846,7 @@ version = "4.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "154517adf0d0b6e22e8e1f385628f14fcaa3db43531dc74303d3edef89d6dfe5"
 dependencies = [
+ "actix-web",
  "mime_guess",
  "regex",
  "rust-embed",
