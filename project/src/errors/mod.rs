@@ -1,9 +1,7 @@
+use crate::models::{ErrorResponse, ValidationErrorResponse};
 use actix_web::{HttpResponse, ResponseError};
 use serde::Serialize;
-use crate::models::{ErrorResponse, ValidationErrorResponse};
 use thiserror::Error;
-
-
 
 #[derive(Debug, Error)]
 pub enum ApiError {
