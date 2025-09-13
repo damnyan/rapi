@@ -1,7 +1,8 @@
+// This module is now empty. All handlers have been moved to the top-level 'handlers' module.
+use crate::models::{Meta, SingleResource};
 use actix_web::{get, web, HttpResponse, Responder};
-use crate::models::{SingleResource, Meta};
+use serde::{Deserialize, Serialize};
 use utoipa::ToSchema;
-use serde::{Serialize, Deserialize};
 
 #[derive(Debug, Serialize, Deserialize, ToSchema)]
 pub struct ExampleResource {
@@ -32,9 +33,16 @@ pub async fn get_example() -> impl Responder {
         id: "1".to_string(),
         name: "Example".to_string(),
         other: "Other".to_string(),
-        some_object: Some(SomeObject { some: "value".to_string() }),
+        some_object: Some(SomeObject {
+            some: "value".to_string(),
+        }),
     };
-    let meta = Meta { extra: Default::default() };
-    let response = SingleResource { data: resource, meta };
+    let meta = Meta {
+        extra: Default::default(),
+    };
+    let response = SingleResource {
+        data: resource,
+        meta,
+    };
     HttpResponse::Ok().json(response)
 }
