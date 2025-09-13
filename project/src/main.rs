@@ -14,12 +14,12 @@ pub mod models;
     components(schemas(
         models::ErrorResponse,
         models::ValidationErrorResponse,
-    models::PaginatedList<handlers::ExampleResource>,
-    models::SingleResource<handlers::ExampleResource>,
+        models::PaginatedList<handlers::ExampleResource>,
+        models::SingleResource<handlers::ExampleResource>,
         models::PaginationMeta,
         models::Meta,
-    handlers::ExampleResource,
-    handlers::SomeObject
+        handlers::ExampleResource,
+        handlers::SomeObject
     )),
     tags()
 )]
