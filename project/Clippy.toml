@@ -1,0 +1,4 @@
+warnings-as-errors = true
+# Linting for API Scaffold
+# See https://rust-lang.github.io/rust-clippy/master/index.html#configuration
+# Only valid keys allowed

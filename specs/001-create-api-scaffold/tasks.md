@@ -13,9 +13,9 @@
 ```
 
 ## Phase 3.1: Setup
-- [ ] T001 Create project/ structure and submodules per plan.md
-- [ ] T002 Initialize Rust project with actix-web, deadpool-postgres, utoipa, and other dependencies in Cargo.toml
-- [ ] T003 [P] Configure linting (rustfmt, clippy) and .env setup
+- [x] T001 Create project/ structure and submodules per plan.md
+- [x] T002 Initialize Rust project with actix-web, deadpool-postgres, utoipa, and other dependencies in Cargo.toml
+- [x] T003 [P] Configure linting (rustfmt, clippy) and .env setup
 
 ## Phase 3.2: Tests First (TDD)
 - [ ] T004 [P] Contract test for error response schema in `specs/001-create-api-scaffold/contracts/example_contract_test.rs`

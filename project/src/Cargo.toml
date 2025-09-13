@@ -1,0 +1,17 @@
+[package]
+name = "api_scaffold"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4"
+tokio = { version = "1", features = ["full"] }
+deadpool-postgres = "0.12"
+utoipa = "4"
+utoipa-swagger-ui = "4"
+serde = { version = "1", features = ["derive"] }
+dotenvy = "0.15"
+thiserror = "1"
+validator = "0.16"
+log = "0.4"
+tracing = "0.1"

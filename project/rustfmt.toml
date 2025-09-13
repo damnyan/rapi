@@ -1,0 +1,5 @@
+[tool.rustfmt]
+edition = "2021"
+
+[tool.clippy]
+warnings-as-errors = true

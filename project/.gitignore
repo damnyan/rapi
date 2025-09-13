@@ -1,0 +1,24 @@
+# Rust/Cargo
+/target/
+**/target/
+**/*.rs.bk
+# IDE/editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
+.DS_Store
+# Environment
+.env
+.env.*
+# Misc
+*.log
+*.out
+*.old
+*.orig
+*.rej
+# By convention, ignore coverage and test output
+/coverage/
+/test-output/
