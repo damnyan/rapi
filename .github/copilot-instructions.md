@@ -20,6 +20,8 @@ This repository uses a specification-driven workflow for feature development, ce
 ## Conventions & Patterns
 
 - **Absolute Paths:** Always use absolute paths from the repo root for file operations.
+
+- **Development Directory:** All development and programming related files are located in the `project/` directory. Always run development-related commands (build, test, run, etc.) from within the `project/` directory unless otherwise specified.
 - **Artifacts:** All design and implementation artifacts are stored in `$SPECS_DIR` for each feature.
 - **Templates:** All markdown artifacts are generated from templates in `.specify/templates/`.
 - **Branching:** Scripts create and check out feature branches automatically.
